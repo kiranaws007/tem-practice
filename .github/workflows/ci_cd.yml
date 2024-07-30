@@ -48,7 +48,7 @@ jobs:
     
     - name: Create TLS secret
       run: |
-        kubectl create secret tls wisecow-tls --cert=/home/runner/work/_temp/tls.crt --key=/home/runner/work/_temp/tls.key --dry-run=client -o yaml | kubectl apply -f -
+        kubectl create secret tls wisecow-tls --cert=tls.crt --key=tls.key --dry-run=client -o yaml | kubectl apply -f -
     
     - name: Deploy to Kubernetes
       run: |
