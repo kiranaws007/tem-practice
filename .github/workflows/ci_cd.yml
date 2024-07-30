@@ -1,4 +1,4 @@
-name: wWisecow CI/CD Pipeline
+name: Wisecow CI/CD Pipeline
 
 on:
   push:
@@ -46,6 +46,6 @@ jobs:
     
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f Problem Statement -1/deployment.yaml
-        kubectl apply -f Problem Statement -1/service.yml
-        kubectl apply -f Problem Statement -1/ingress.yml
+        kubectl apply -f Problem Statement-1/deployment.yaml
+        kubectl apply -f Problem Statement-1/service.yml
+        kubectl apply -f Problem Statement-1/ingress.yml
