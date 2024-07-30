@@ -38,11 +38,12 @@ jobs:
     - name: Set up Google Cloud CLI
       uses: google-github-actions/setup-gcloud@v2
       with:
-        service_account_key: ${{ secrets.GKE_APPLICATIONS_CREDENTIALS}}
+        service_account_key: ${{ secrets.GKE_SA_KEY }}
         project_id: docker-practice-430705
     
     - name: Authenticate to GKE
       run: |
+        gcloud auth activate-service-account --key-file=${{ secrets.GKE_SA_KEY }}
         gcloud config set project docker-practice-430705
         gcloud container clusters get-credentials wisecowapp --zone us-central1-c --project docker-practice-430705
     
