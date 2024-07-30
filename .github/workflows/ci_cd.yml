@@ -26,7 +26,8 @@ jobs:
       with:
         context: .
         push: true
-        tags: kirankumars/wisecowapp:latest    
+        tags: kirankumars/wisecowapp:latest
+    
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -34,18 +35,23 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     
-    - name: Set up kubectl
-      uses: actions-hub/kubectl@master
+    - name: Set up Google Cloud CLI
+      uses: google-github-actions/setup-gcloud@v2
       with:
-        version: '1.21.0'
-        config: ${{ secrets.KUBECONFIG }}
+        service_account_key: ${{ secrets.GKE_APPLICATIONS_CREDENTIALS}}
+        project_id: docker-practice-430705
+    
+    - name: Authenticate to GKE
+      run: |
+        gcloud config set project docker-practice-430705
+        gcloud container clusters get-credentials wisecowapp --zone us-central1-c --project docker-practice-430705
     
     - name: Create TLS secret
       run: |
-        kubectl create secret tls wisecow-tls --cert=Problem Statement -1/tls.crt --key=Problem Statement -1/tls.key --dry-run=client -o yaml | kubectl apply -f -
+        kubectl create secret tls wisecow-tls --cert=ProblemStatement-1/tls.crt --key=ProblemStatement-1/tls.key --dry-run=client -o yaml | kubectl apply -f -
     
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f Problem Statement-1/deployment.yaml
-        kubectl apply -f Problem Statement-1/service.yml
-        kubectl apply -f Problem Statement-1/ingress.yml
+        kubectl apply -f ProblemStatement-1/deployment.yaml
+        kubectl apply -f ProblemStatement-1/service.yml
+        kubectl apply -f ProblemStatement-1/ingress.yml
