@@ -45,8 +45,8 @@ jobs:
       env:
         GKE_SA_KEY: ${{ secrets.GKE_SA_KEY }}
       run: |
-        echo "${GKE_SA_KEY}" > /tmp/gcloud-service-key.json
-        gcloud auth activate-service-account --key-file=/tmp/gcloud-service-key.json
+        echo "${GKE_SA_KEY}" > /Problem Statement-1/gcloud-service-key.json
+        gcloud auth activate-service-account --key-file=/Problem Statement-1/gcloud-service-key.json
         gcloud config set project docker-practice-430705
         gcloud container clusters get-credentials wisecowapp --zone us-central1-c --project docker-practice-430705
     
