@@ -31,7 +31,7 @@ jobs:
     - name: Print environment variables
       run: |
         echo "DOCKER_HUB_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}"
-        echo "DOCKER_HUB_ACCESS_TOKEN length=${#${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}}"
+        echo "DOCKER_HUB_ACCESS_TOKEN length=${#secrets.DOCKER_HUB_ACCESS_TOKEN}}"
     
   deploy:
     runs-on: ubuntu-latest
