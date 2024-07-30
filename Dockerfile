@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y fortune cowsay netcat-openbsd && \
 COPY wisecow.sh .
 
 # Copy TLS certificates
-COPY tls.crt /etc/ssl/certs/tls.crt
-COPY tls.key /etc/ssl/private/tls.key
+COPY tls.crt /etc/ssl/tls.crt
+COPY tls.key /etc/ssl/tls.key
 
 EXPOSE 4499
 
