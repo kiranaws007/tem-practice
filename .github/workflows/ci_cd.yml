@@ -34,14 +34,19 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    
+
+    - name: Set up Google Cloud CLI
+      uses: google-github-actions/setup-gcloud@v2
+      with:
+        service_account_key: ${{ secrets.GKE_SA_KEY }}
+        project_id: docker-practice-430705
+
     - name: Save Service Account Key
-      run: |
-        echo "${{ secrets.GKE_SA_KEY }}" > /home/runner/work/_temp/gcloud-service-key.json
+      run: echo "${{ secrets.GKE_SA_KEY }}" > $GITHUB_WORKSPACE/gcloud-service-key.json
     
     - name: Authenticate with Google Cloud
       run: |
-        gcloud auth activate-service-account --key-file=/home/runner/work/_temp/gcloud-service-key.json
+        gcloud auth activate-service-account --key-file=$GITHUB_WORKSPACE/gcloud-service-key.json
         gcloud config set project docker-practice-430705
     
     - name: Authenticate to GKE
@@ -50,10 +55,10 @@ jobs:
 
     - name: Create TLS secret
       run: |
-        kubectl create secret tls wisecow-tls --cert=ProblemStatement-1/tls.crt --key=ProblemStatement-1/tls.key --dry-run=client -o yaml | kubectl apply -f -
+        kubectl create secret tls wisecow-tls --cert=$GITHUB_WORKSPACE/ProblemStatement-1/tls.crt --key=$GITHUB_WORKSPACE/ProblemStatement-1/tls.key --dry-run=client -o yaml | kubectl apply -f -
     
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f ProblemStatement-1/deployment.yaml
-        kubectl apply -f ProblemStatement-1/service.yml
-        kubectl apply -f ProblemStatement-1/ingress.yml
+        kubectl apply -f $GITHUB_WORKSPACE/ProblemStatement-1/deployment.yaml
+        kubectl apply -f $GITHUB_WORKSPACE/ProblemStatement-1/service.yml
+        kubectl apply -f $GITHUB_WORKSPACE/ProblemStatement-1/ingress.yml
