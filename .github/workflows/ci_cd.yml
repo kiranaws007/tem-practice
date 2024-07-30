@@ -42,17 +42,13 @@ jobs:
         project_id: docker-practice-430705
     
     - name: Authenticate to GKE
-      env:
-        GKE_SA_KEY: ${{ secrets.GKE_SA_KEY }}
       run: |
-        echo "${GKE_SA_KEY}" > /Problem Statement-1/gcloud-service-key.json
-        gcloud auth activate-service-account --key-file=/Problem Statement-1/gcloud-service-key.json
         gcloud config set project docker-practice-430705
         gcloud container clusters get-credentials wisecowapp --zone us-central1-c --project docker-practice-430705
     
     - name: Create TLS secret
       run: |
-        kubectl create secret tls wisecow-tls --cert=ProblemStatement-1/tls.crt --key=ProblemStatement-1/tls.key --dry-run=client -o yaml | kubectl apply -f -
+        kubectl create secret tls wisecow-tls --cert=/home/runner/work/_temp/tls.crt --key=/home/runner/work/_temp/tls.key --dry-run=client -o yaml | kubectl apply -f -
     
     - name: Deploy to Kubernetes
       run: |
