@@ -47,4 +47,5 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f Problem Statement -1/deployment.yaml
-        kubectl apply -f Problem Statement -1/service.yaml
+        kubectl apply -f Problem Statement -1/service.yml
+        kubectl apply -f Problem Statement -1/ingress.yml
