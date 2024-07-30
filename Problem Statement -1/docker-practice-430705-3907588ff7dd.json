@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "docker-practice-430705",
+  "private_key_id": "3907588ff7dd7d2fd842fb49505009a6e9833c24",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCNxNb6VmACf4vz\n/LOQntMowdv+ClQlJv2rjMslrUQ7S/5wjWbq7Zg+G8Ze5OXYrjRW2SzKxyb67DUX\nAGsy2Vz7GUniuyTkKmYSfXYsAQ74TsYjH51zdSb+9YMUBOelajbtwI813nY+u/DB\n5Tnej4bczHkgZMKNOKwBBGmCoNRmL9dBfUi7SH3JPwS9pagJMSOz0MmyMqLWA5A7\nEfoOkfWg7MLaeZObCBdzFuSOQ9k1Njmr2PimBHSPTL1CDaxU6rThNs746/ywTgl+\ncuJ1gx4WObGti2j90tV4naio8fcnZvYLLEB1r2wsVcI0RDTYLkshFSGLm8X8eIMP\nRbALioclAgMBAAECggEAKK3Dld90+yKIEQGAsM2x/27o5hMmo+Z1QWVL4Uq/Wlhq\n8PbSAjUcyy2DFTWO8kbCQ+1bGfBdMgDXFvuKxvNx56cQ+VsDseiskz+myeef2QYZ\neniW4EtMXjoqW3Mw2NkKW9w1+5oSydt5sNlKap86bl7Jns7quET7resLL21gpNVF\n+lRihn/Qob69UvwEV2ZF85cNn+5vBj8Xzew08vdlI3aKkVOdnRDcm8OQe/rQYcY2\naMsBfStOJ9qv3BjnoKbxwnyU0pUM8X4c7gSVB2/ZONm381r9BiJfKRgTtBipgU/h\nqhfI2ZaUyA8LNEQyO/wZWfpHwJvgjjd2et4ssU8NnQKBgQDHHNkwvXt4pqB/ski4\n+cwJqwy8Hym5EdQYgZPqG+XpMOFYDaiAS6HohB7IJurdLfIvvgWNKdgJk/uTJScp\nlfEzITw5I1W6vFGWC93h55Fh0gK5RJ9j0WU4eUSMQJexByMlPHRSNi7YxhmA+4L0\nTy3PP89bcu92jy9Xs0HHwjPvMwKBgQC2RdpN43DQkPbiIvbJvXmH13+1+OqtquPf\nLC9n412swEJVTmntcSdnG4KHVF3P9Cv0RR95Xkt+LKd2t+tf3GKqLQR92+DIqfSo\nib69fp4EhFIvreNl07fGaqxDrg/XXiVq0PVlXDh838O7VGX0LNWqSXl7Lu+gVH7d\nYJuRDxAQRwKBgQDEsPbMcyHZmaDLBG9aa0jn9BTscUxiCf6fBsH7bfu8VBEHTta5\nhf03F+zgg7FXNOAd0XTicgd7zreiL/1z0y8l9xrqxsEVapqdwrM5SewP2cnfAq8B\niASZuRHCCrzOn+JUElhGLkgw0+C1zb8bYGw8YyiPigaL8/4sgGPm1S1AiQKBgBpd\nsF5j8AW7cnrzo8864UGNIqQoBYppldzKf3D/qqU6il3coeX+4DxB9nes9IUIRPNo\nrEzaHwF5ZCAAKsQLFRqYuHWcQL/GFeXrRvQSRLlSirDq7mHkZkkFVTXVD+WPcMoq\nv9SRqnolxCJs6vKPKbkgN7ph57fBgTh0qQwqqaAxAoGAKQYFMRXUs8pGDI+EeDOn\nvbhvPcWka+lhhIa2kTfkLYrklA/vJuvqMJ+SN3inyugkUaIpEdQmpzRNG75B7hrm\nclULhRwnxcyxqZR08IehUP6/EgsKSwZuKQ9HRm42CPSPB969MO3eKINdJ9DtSD8N\n+r8wc2p7D5yz0hVEl3x+IQM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "wisecowapp@docker-practice-430705.iam.gserviceaccount.com",
+  "client_id": "113471581039472086717",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wisecowapp%40docker-practice-430705.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
